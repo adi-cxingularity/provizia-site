@@ -1,13 +1,14 @@
 import staff from "../assets/images/StaffAccess.png";
 import investor from "../assets/images/InvestorAccess.png";
+import borrower from "../assets/images/BorrowerAccess.png";
 
 const roles = [
   {
-    title: "Staff Access",
+    title: "Borrower Access",
     desc: "Manage your account and access personalized services.",
-    route: "/staff",
-    loginUrl: "https://cx-lending-core.web.app/login",
-    image: staff,
+    route: "/borrower",
+    loginUrl: "https://cx-lending-borrower.web.app/login",
+    image: borrower,
   },
   {
     title: "Investor Access",
