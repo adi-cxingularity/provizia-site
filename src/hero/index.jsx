@@ -51,7 +51,6 @@ const Hero = () => {
             width: "100%",
             borderRadius: "28px",
             overflow: "hidden",
-            // background: "rgba(255,255,255,0.02)",
             backdropFilter: "blur(10px)",
             boxShadow: `
               0 30px 80px rgba(0,0,0),
