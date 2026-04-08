@@ -75,11 +75,14 @@ const AccessCard = ({ role, index, registerRef, onHover }) => {
             href={role.loginUrl}
             target="_blank"
             sx={{
+              mt: 2,
+              px: 2,
+              py: 1,
               backgroundColor: "rgba(0, 255, 255, 0.65)",
               boxShadow: "0 8px 20px rgba(0, 255, 255, 0.4)",
-              fontSize: "0.7rem",
+              fontSize: "0.8rem",
               fontWeight: 600,
-              color: "black",
+              color: "white",
               "&:hover": {
                 backgroundColor: "rgba(0, 255, 255, 0.8)",
                 boxShadow: "0 12px 30px rgba(0, 255, 255, 0.5)",
@@ -178,9 +181,11 @@ const AccessCard = ({ role, index, registerRef, onHover }) => {
           target="_blank"
           sx={{
             mt: 2,
+            px: 2,
+            py: 1,
             backgroundColor: "rgba(0, 255, 255, 0.65)",
             boxShadow: "0 8px 20px rgba(0, 255, 255, 0.4)",
-            fontSize: "0.7rem",
+            fontSize: "1rem",
             fontWeight: 600,
             color: "white",
             "&:hover": {
