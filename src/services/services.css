@@ -1,0 +1,225 @@
+/* ═══════════════════════════════════════════════
+   Services Component Styles
+   ═══════════════════════════════════════════════ */
+
+/* ── Container ── */
+.services-container {
+  background: rgb(16, 16, 16);
+  position: relative;
+  padding: 2rem 0;
+  overflow: hidden;
+  will-change: transform;
+}
+
+/* ── WebGL canvas background ── */
+.services-canvas-wrap {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* ── Decorative lines wrap ── */
+.services-top-branches {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.top-branch {
+  position: absolute;
+  top: 0;
+  width: 2px;
+  height: 100px;
+  background: rgba(0, 255, 255, 0.5);
+  transform-origin: top;
+}
+
+.services-top-bar {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  width: 60%;
+  height: 2px;
+  transform: translateX(-50%);
+  background: rgba(0, 255, 255, 0.5);
+}
+
+/* ── Main timeline line ── */
+.services-main-line {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  top: 5%;
+  height: 89%;
+  background: rgba(0, 255, 255, 0.08);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.services-main-line-glow {
+  position: absolute;
+  left: 50%;
+  width: 3px;
+  top: 5%;
+  height: 89%;
+  background: #00ffff;
+  transform: translateX(-50%) scaleY(0);
+  pointer-events: none;
+  will-change: transform;
+}
+
+/* ── Bottom split branches ── */
+.services-bottom-branches {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 160px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.bottom-branch {
+  position: absolute;
+  top: 40px;
+  width: 2px;
+  height: 120px;
+  background: rgba(0, 255, 255, 0.5);
+  transform-origin: top;
+}
+
+.services-bottom-bar {
+  position: absolute;
+  top: 40px;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background: rgba(0, 255, 255, 0.5);
+}
+
+/* ── Timeline items ── */
+.timeline-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 12rem 0;
+  position: relative;
+  z-index: 2;
+}
+
+.timeline-item--left  { flex-direction: row; }
+.timeline-item--right { flex-direction: row-reverse; }
+
+/* ── Node dot ── */
+.node {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(0, 255, 255, 0.5);
+  will-change: transform;
+}
+
+/* ── Image panel ── */
+.image {
+  width: 420px;
+  height: 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.1);
+  position: relative;
+  will-change: transform, opacity;
+  flex-shrink: 0;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  display: block;
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 255, 255, 0.05);
+  backdrop-filter: brightness(0.8);
+  pointer-events: none;
+}
+
+/* ── Text panel ── */
+.text {
+  width: 420px;
+  padding: 2rem;
+  color: white;
+  will-change: transform, opacity;
+  flex-shrink: 0;
+}
+
+/* ════════════════════════════════════════════════
+   Responsive Breakpoints
+   ════════════════════════════════════════════════ */
+
+/* ── Tablet (≤ 900px) ── */
+@media (max-width: 900px) {
+  .timeline-item,
+  .timeline-item--left,
+  .timeline-item--right {
+    flex-direction: column !important;
+    margin: 6rem 1.5rem;
+  }
+
+  .image {
+    width: min(90vw, 420px);
+    height: 220px;
+  }
+
+  .text {
+    width: min(90vw, 420px);
+    padding: 1.25rem 1rem;
+    text-align: center;
+  }
+
+  /* Hide nodes and all timeline lines at tablet */
+  .node,
+  .services-main-line,
+  .services-main-line-glow,
+  .services-top-branches,
+  .services-bottom-branches {
+    display: none !important;
+  }
+}
+
+/* ── Mobile (≤ 600px) ── */
+@media (max-width: 600px) {
+  .timeline-item,
+  .timeline-item--left,
+  .timeline-item--right {
+    flex-direction: column !important;
+    margin: 4rem 1rem;
+  }
+
+  .image {
+    width: calc(100vw - 2rem);
+    height: 180px;
+    border-radius: 12px;
+  }
+
+  .text {
+    width: calc(100vw - 2rem);
+    padding: 1rem 0.75rem;
+    text-align: center;
+  }
+
+  .text .MuiTypography-root {
+    font-size: 1.6rem !important;
+  }
+}

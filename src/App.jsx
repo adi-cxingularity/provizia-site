@@ -8,7 +8,7 @@ import "./App.css";
 import "@fontsource/roboto";
 import Hero from "./hero/index";
 import Services from "./services";
-import Scene from "./about/scene";
+import TrackRecord from "./trackRecord";
 import Clients from "./clients";
 import GlobeScene from "./global";
 import Access from "./Access";
@@ -36,12 +36,12 @@ function App() {
                 <GlobeScene />
               </section>
 
-              <section id="services">
-                <Services />
+              <section id="track-record">
+                <TrackRecord />
               </section>
 
-              <section id="about">
-                <Scene />
+              <section id="services">
+                <Services />
               </section>
 
               <section id="access">

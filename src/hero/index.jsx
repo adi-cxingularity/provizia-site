@@ -45,18 +45,16 @@ const Hero = () => {
       <div className="sticky top-0 h-[200vh] flex items-center justify-center p-4">
         {/* 🪟 WINDOW CONTAINER */}
         <Box
-          className="bg-black"
           sx={{
             position: "relative",
             height: "100%",
             width: "100%",
             borderRadius: "28px",
             overflow: "hidden",
-            background: "rgba(255,255,255,0.02)",
             backdropFilter: "blur(10px)",
             boxShadow: `
               0 30px 80px rgba(0,0,0),
-              inset 0 0 0 1px rgba(255,255,255,0.05)
+              // inset 0 0 0 1px rgba(255,255,255,0.05)
             `,
           }}
         >
@@ -171,13 +169,13 @@ const Hero = () => {
                 variant="contained"
                 sx={{
                   mt: 2,
-                  backgroundColor: "rgba(0, 255, 255, 0.8)",
+                  backgroundColor: "rgba(0, 255, 255, 0.7)",
                   boxShadow: "0 8px 20px rgba(0, 255, 255, 0.4)",
                   fontSize: "1rem",
                   fontWeight: 600,
-                  color: "black",
+                  color: "white",
                   "&:hover": {
-                    backgroundColor: "rgba(0, 255, 255, 0.9)",
+                    backgroundColor: "rgba(0, 255, 255, 0.8)",
                     boxShadow: "0 12px 30px rgba(0, 255, 255, 0.5)",
                   },
                 }}
