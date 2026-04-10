@@ -169,14 +169,14 @@ const Hero = () => {
                 variant="contained"
                 sx={{
                   mt: 2,
-                  backgroundColor: "rgba(0, 255, 255, 0.7)",
-                  boxShadow: "0 8px 20px rgba(0, 255, 255, 0.4)",
+                  backgroundColor: "rgba(0, 255, 255, 0.8)",
+                  boxShadow: "0px 0px 20px rgba(0, 255, 255, 0.4)",
                   fontSize: "1rem",
                   fontWeight: 600,
                   color: "white",
                   "&:hover": {
-                    backgroundColor: "rgba(0, 255, 255, 0.8)",
-                    boxShadow: "0 12px 30px rgba(0, 255, 255, 0.5)",
+                    backgroundColor: "rgba(0, 255, 255, 0.85)",
+                    boxShadow: "0 8px 30px rgba(0, 255, 255, 0.5)",
                   },
                 }}
                 href="#access"
